@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "robloxstudio-mcp": {
+      "command": "node",
+      "args": ["roblox-studio-mcp/src/index.js"]
+    }
+  }
+}
