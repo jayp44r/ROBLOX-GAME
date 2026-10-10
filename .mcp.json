@@ -3,6 +3,10 @@
     "robloxstudio-mcp": {
       "command": "node",
       "args": ["roblox-studio-mcp/src/index.js"]
+    },
+    "blender-mcp": {
+      "command": "node",
+      "args": ["blender-mcp/src/index.js"]
     }
   }
 }
