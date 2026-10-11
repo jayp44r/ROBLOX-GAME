@@ -109,6 +109,6 @@
 
     Write-Host "`nAll done! Opening Claude Code now." -ForegroundColor Green
     Write-Host "Have your game open in Roblox Studio. Next time, just double-click 'Roblox Claude' on your desktop."
-    Write-Host "First time only: log in when asked, pick "Yes, I trust this folder" (Down arrow, then Enter), and click Allow in Studio."
+    Write-Host "First time only: log in when asked, pick 'Yes, I trust this folder' (Down arrow, then Enter), and click Allow in Studio."
     Start-Process $shortcutPath
 }
