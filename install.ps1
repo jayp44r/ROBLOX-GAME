@@ -100,15 +100,14 @@
     $shortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "Roblox Claude.lnk"
     $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($shortcutPath)
     $shortcut.TargetPath = "powershell.exe"
-    $shortcut.Arguments = "-NoProfile -NoExit -Command `"& '$claudeExe' 'connect to Studio'`""
+    $shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$(Join-Path $root 'start.ps1')`""
     $shortcut.WorkingDirectory = $root
     $shortcut.IconLocation = "$claudeExe,0"
     $shortcut.Description = "Open Claude Code connected to Roblox Studio"
     $shortcut.Save()
     Ok "Done"
 
-    Write-Host "`nAll done! Opening Claude Code now." -ForegroundColor Green
-    Write-Host "Have your game open in Roblox Studio. Next time, just double-click 'Roblox Claude' on your desktop."
-    Write-Host "First time only: log in when asked, pick 'Yes, I trust this folder' (Down arrow, then Enter), and click Allow in Studio."
+    Write-Host "`nAll done! Opening Roblox Claude now: press Enter in it to connect." -ForegroundColor Green
+    Write-Host "Next time, just double-click 'Roblox Claude' on your desktop and press Enter."
     Start-Process $shortcutPath
 }

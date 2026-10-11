@@ -10,13 +10,13 @@ Lets Claude Code build in **Roblox Studio** for you: GUIs, maps, pets, models an
    irm https://raw.githubusercontent.com/jayp44r/ROBLOX-GAME/HEAD/install.ps1 | iex
    ```
 
-It installs everything, puts **Roblox Claude** on your desktop, and opens Claude Code already connected to Studio.
+It installs everything, puts **Roblox Claude** on your desktop, and opens it. When it says **Press Enter to connect Claude to Roblox Studio**, press **Enter**.
 
 First time only: log in when asked, pick **Yes, I trust this folder** (press the **Down arrow**, then **Enter**), and click **Allow** if Studio asks about `localhost`.
 
 ## Every time after that
 
-Open your game in Studio, double-click **Roblox Claude** on your desktop, and ask for anything, like *"make a shop GUI"*.
+Open your game in Studio, double-click **Roblox Claude** on your desktop, press **Enter**, and ask for anything, like *"make a shop GUI"*.
 
 To update, paste the command again.
 
