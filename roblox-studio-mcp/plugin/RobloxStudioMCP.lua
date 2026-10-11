@@ -842,6 +842,8 @@ local function loop()
 				if okDecode and type(command) == "table" then
 					task.spawn(runCommand, command)
 				end
+			elseif response.StatusCode ~= 204 then
+				task.wait(1) -- unexpected answer: don't spin, just try again
 			end
 		else
 			if reachable ~= false then
@@ -849,7 +851,7 @@ local function loop()
 				reachable = false
 			end
 			task.wait(backoff)
-			backoff = math.min(backoff * 2, 5)
+			backoff = math.min(backoff * 2, 2)
 		end
 	end
 	loopRunning = false
@@ -858,7 +860,6 @@ end
 local function setConnected(value)
 	connected = value
 	button:SetActive(value)
-	plugin:SetSetting("RobloxStudioMCP_Enabled", value)
 	if value then
 		task.spawn(loop)
 	else
@@ -874,5 +875,5 @@ plugin.Unloading:Connect(function()
 	connected = false
 end)
 
--- Connect automatically unless the user switched it off last time.
-setConnected(plugin:GetSetting("RobloxStudioMCP_Enabled") ~= false)
+-- Always connect when Studio opens. The button only pauses it until Studio restarts.
+setConnected(true)

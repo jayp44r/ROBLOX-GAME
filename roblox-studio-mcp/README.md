@@ -71,7 +71,7 @@ Paths are dot-separated from `game`, for example `StarterGui.ShopGui.MainFrame`.
 ## Settings
 
 - **Port:** set `ROBLOX_STUDIO_MCP_PORT` for the server, and change `PORT` at the top of the plugin file to match. The default is `44755`.
-- **Pausing:** click the **Connect** button to disconnect. Studio remembers the choice.
+- **Pausing:** click the **Connect** button to disconnect until Studio restarts. It always connects again when Studio opens.
 - **Playtests:** only the edit window connects. Playtest server and client windows stay quiet.
 
 ## Troubleshooting
