@@ -12,7 +12,7 @@ Lets Claude Code build in **Roblox Studio** for you: GUIs, maps, pets, models an
 
 It installs everything, puts **Roblox Claude** on your desktop, and opens Claude Code already connected to Studio.
 
-First time only: log in when asked, press **Enter** to trust the folder, and click **Allow** if Studio asks about `localhost`.
+First time only: log in when asked, pick **Yes, I trust this folder** (press the **Down arrow**, then **Enter**), and click **Allow** if Studio asks about `localhost`.
 
 ## Every time after that
 
