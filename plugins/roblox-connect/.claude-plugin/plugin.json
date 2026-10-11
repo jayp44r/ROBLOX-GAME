@@ -1,0 +1,5 @@
+{
+  "name": "roblox-connect",
+  "version": "0.1.0",
+  "description": "Connect Claude Code to Roblox Studio: a /studio command and a status line showing if Studio is connected."
+}

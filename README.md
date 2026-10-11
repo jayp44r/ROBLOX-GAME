@@ -20,6 +20,14 @@ Open your game in Studio, double-click **Roblox Claude** on your desktop, press 
 
 To update, paste the command again.
 
+## Roblox Connect mod
+
+Adds a **/studio** command that connects Claude to Studio, and a line at the bottom showing **Roblox Studio: connected** or **not connected**. To add it, type this in Claude Code and press **Enter** (then `y`, then **Enter**):
+
+```
+/plugin install roblox-connect --marketplace jayp44r/ROBLOX-GAME
+```
+
 ## If it doesn't connect
 
 - In Studio, open the **Plugins** tab. The **MCP → Connect** button should be lit; if not, click it.

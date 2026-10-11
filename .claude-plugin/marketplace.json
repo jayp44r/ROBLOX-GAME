@@ -1,0 +1,11 @@
+{
+  "name": "roblox-game",
+  "owner": { "name": "jayp44r" },
+  "plugins": [
+    {
+      "name": "roblox-connect",
+      "source": "./plugins/roblox-connect",
+      "description": "Connect Claude Code to Roblox Studio: a /studio command and a status line showing if Studio is connected."
+    }
+  ]
+}
