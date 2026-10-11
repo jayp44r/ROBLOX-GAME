@@ -22,7 +22,7 @@ You need [Node.js](https://nodejs.org) 18 or newer.
    ```
 2. **Install the plugin.** In Studio, open the **Plugins** tab and click **Plugins Folder**. Copy `plugin/RobloxStudioMCP.lua` into that folder, then restart Studio.
 3. **Turn on the connection.** Open your place. An **MCP** toolbar with a **Connect** button appears in the Plugins tab. It connects automatically, and the button lights up when it's on. The first time, Studio asks whether the plugin may make HTTP requests to `localhost`. Click **Allow**.
-4. **Add the server to Claude Code.** If you open Claude Code in this repo folder, the `.mcp.json` at the repo root already registers it; approve it when Claude Code asks. To use it from any folder instead:
+4. **Add the server to Claude Code.** If you open Claude Code in this repo folder, the `.mcp.json` at the repo root already registers it, and `.claude/settings.json` turns it on automatically (no approval prompt). To use it from any folder instead:
    ```
    claude mcp add --scope user robloxstudio-mcp -- node "/full/path/to/roblox-studio-mcp/src/index.js"
    ```

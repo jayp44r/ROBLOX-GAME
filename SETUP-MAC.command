@@ -50,6 +50,6 @@ fi
 
 printf '\n\033[32mAll done!\033[0m\n'
 echo "Open Roblox Studio and Blender, then open THIS folder in Claude Code on this computer"
-echo "(local, not cloud). Approve the two servers when asked, and ask it to build."
+echo "(local, not cloud). The connections turn on by themselves; just ask it to build."
 echo "The first time, Studio asks to allow the plugin to use localhost: click Allow."
 finish 0

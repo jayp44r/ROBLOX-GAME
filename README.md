@@ -9,7 +9,7 @@ Connects Claude Code to **Roblox Studio** and **Blender**, so Claude can build G
    - the connection servers (it installs Node.js too if it's missing),
    - the Roblox Studio plugin,
    - the Blender add-on.
-3. Open Roblox Studio and Blender, then open **this folder** in Claude Code on your computer. Choose a local session, not cloud, and approve the two servers when asked.
+3. Open Roblox Studio and Blender, then open **this folder** in the Claude Code desktop app on your computer (choose a local session, not cloud). The connections turn on by themselves: no commands, no approval prompts.
 
 Done. Ask Claude Code to build something. The first time, Studio asks to allow the plugin to use `localhost`: click **Allow**.
 

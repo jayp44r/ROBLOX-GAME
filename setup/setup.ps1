@@ -65,6 +65,6 @@ if ($blender) {
 
 Write-Host "`nAll done!" -ForegroundColor Green
 Write-Host "Open Roblox Studio and Blender, then open THIS folder in Claude Code on this computer"
-Write-Host "(local, not cloud). Approve the two servers when asked, and ask it to build."
+Write-Host "(local, not cloud). The connections turn on by themselves; just ask it to build."
 Write-Host "The first time, Studio asks to allow the plugin to use localhost: click Allow."
 Read-Host "`nPress Enter to close"
