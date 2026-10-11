@@ -19,9 +19,14 @@ curl -fsSL https://raw.githubusercontent.com/jayp44r/ROBLOX-GAME/HEAD/install.sh
 It downloads everything into your **Documents** folder as **ROBLOX-GAME**, installs it, and opens the folder. Wait until it says **All done!**
 
 **2. Start building.**
+
+**Windows:**
 1. Open Roblox Studio and open your game.
-2. Open the Claude Code app, pick the **ROBLOX-GAME** folder in Documents, and pick **Local** (not Cloud).
-3. Type: **connect to Studio**
+2. Double-click **Roblox Claude** on your desktop. It opens Claude Code in the right folder and connects to Studio by itself.
+
+The first time, it asks you to log in, and asks whether to trust the folder (press **Enter**).
+
+**Mac:** open Roblox Studio and your game, then open the **ROBLOX-GAME** folder (in Documents) in the Claude Code app, pick **Local**, and type **connect to Studio**.
 
 The first time, Studio asks to let the plugin use `localhost`. Click **Allow**.
 
@@ -29,7 +34,7 @@ That's it. Now ask for anything, like *"make a shop GUI"* or *"build a lava obby
 
 ## Every time after that
 
-Open Studio, open the **Documents/ROBLOX-GAME** folder in Claude Code (Local), and ask.
+Open your game in Studio, then double-click **Roblox Claude** (Windows) and ask.
 
 ## If it doesn't connect
 

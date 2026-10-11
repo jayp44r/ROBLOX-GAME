@@ -63,10 +63,34 @@ if ($blender) {
     Warn "Blender not found. After installing Blender, run this setup again."
 }
 
+# 5. Claude Code + desktop shortcut ----------------------------------------
+Step "Installing Claude Code"
+$claudeExe = Join-Path $env:USERPROFILE ".local\bin\claude.exe"
+if (-not (Get-Command claude -ErrorAction SilentlyContinue) -and -not (Test-Path $claudeExe)) {
+    & powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://claude.ai/install.ps1 | iex" | Out-Host
+    Refresh-Path
+}
+$claude = Get-Command claude -ErrorAction SilentlyContinue
+if ($claude) { $claudeExe = $claude.Source }
+if (Test-Path $claudeExe) {
+    Ok "Claude Code is installed"
+    $shortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "Roblox Claude.lnk"
+    $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($shortcutPath)
+    $shortcut.TargetPath = "powershell.exe"
+    $shortcut.Arguments = "-NoProfile -NoExit -Command `"& '$claudeExe' 'connect to Studio'`""
+    $shortcut.WorkingDirectory = $root
+    $shortcut.IconLocation = "$claudeExe,0"
+    $shortcut.Description = "Open Claude Code connected to Roblox Studio"
+    $shortcut.Save()
+    Ok "Added 'Roblox Claude' to your desktop"
+} else {
+    Warn "Claude Code is missing. Install it from https://claude.ai/download, then run this setup again."
+}
+
 Write-Host "`nAll done!" -ForegroundColor Green
 Write-Host "Next:"
 Write-Host "  1. Open Roblox Studio and open your game."
-Write-Host "  2. Open the Claude Code app, pick THIS folder, and pick Local (not Cloud)."
-Write-Host "  3. Type: connect to Studio"
+Write-Host "  2. Double-click 'Roblox Claude' on your desktop."
+Write-Host "The first time, it asks you to log in and to trust the folder: press Enter."
 Write-Host "The first time, Studio asks to let the plugin use localhost: click Allow."
 Read-Host "`nPress Enter to close"
