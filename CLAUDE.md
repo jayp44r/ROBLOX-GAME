@@ -16,6 +16,6 @@ Treat "connect", "connect to Studio", "check Studio" and similar as a request to
    Then call `get_connected_instances` again.
 4. If the `robloxstudio-mcp` tools are missing or show as failed:
    - In a cloud session, they can't work: Studio runs on the user's computer and a cloud container can't reach it. Tell the user to open this folder in a **local** Claude Code session on the computer that runs Studio.
-   - In a local session, the setup probably hasn't been run. Tell the user to double-click `SETUP-WINDOWS.bat` (Windows) or `SETUP-MAC.command` (Mac), then restart Claude Code.
+   - In a local session, the setup probably hasn't been run. Tell the user to paste `irm https://raw.githubusercontent.com/jayp44r/ROBLOX-GAME/HEAD/install.ps1 | iex` into PowerShell, then double-click **Roblox Claude** on the desktop.
 
 Do the same for Blender with `blender-mcp` when the user asks to connect to Blender.
