@@ -64,6 +64,15 @@ const uiNode = z.lazy(() =>
   })
 );
 
+// The plugin retries every few seconds, so give a just-opened Studio a moment to check in.
+async function waitForInstances(maxMs) {
+  const deadline = Date.now() + maxMs;
+  while (bridge.connectedInstances().length === 0 && Date.now() < deadline) {
+    await new Promise((resolve) => setTimeout(resolve, 250));
+  }
+  return bridge.connectedInstances();
+}
+
 function tool(name, description, shape, type, { timeoutMs } = {}) {
   server.registerTool(name, { description, inputSchema: { ...shape, instanceId } }, async (args) => {
     const { instanceId: target, ...rest } = args;
@@ -71,7 +80,7 @@ function tool(name, description, shape, type, { timeoutMs } = {}) {
       if (bridgeError) throw new Error(bridgeError);
       const result =
         type === "__local__"
-          ? bridge.connectedInstances()
+          ? await waitForInstances(8000)
           : await bridge.send(type, rest, { instanceId: target, timeoutMs });
       return { content: [{ type: "text", text: typeof result === "string" ? result : JSON.stringify(result, null, 2) }] };
     } catch (err) {
