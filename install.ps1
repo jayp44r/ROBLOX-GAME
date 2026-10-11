@@ -95,7 +95,7 @@
     }
     Ok "Claude Code is ready"
 
-    # 7. Desktop shortcut, then open it ---------------------------------------------
+    # 7. Desktop shortcut, then start here ---------------------------------------------
     Step "Adding 'Roblox Claude' to your desktop"
     $shortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "Roblox Claude.lnk"
     $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($shortcutPath)
@@ -107,7 +107,8 @@
     $shortcut.Save()
     Ok "Done"
 
-    Write-Host "`nAll done! Opening Roblox Claude now: press Enter in it to connect." -ForegroundColor Green
-    Write-Host "Next time, just double-click 'Roblox Claude' on your desktop and press Enter."
-    Start-Process $shortcutPath
+    Write-Host "`nAll done! Next time, just double-click 'Roblox Claude' on your desktop." -ForegroundColor Green
+    # Carry on in this same window instead of opening a second one.
+    Set-Location $root
+    & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $root "start.ps1")
 }
