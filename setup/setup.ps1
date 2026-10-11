@@ -64,7 +64,9 @@ if ($blender) {
 }
 
 Write-Host "`nAll done!" -ForegroundColor Green
-Write-Host "Open Roblox Studio and Blender, then open THIS folder in Claude Code on this computer"
-Write-Host "(local, not cloud). The connections turn on by themselves; just ask it to build."
-Write-Host "The first time, Studio asks to allow the plugin to use localhost: click Allow."
+Write-Host "Next:"
+Write-Host "  1. Open Roblox Studio and open your game."
+Write-Host "  2. Open the Claude Code app, pick THIS folder, and pick Local (not Cloud)."
+Write-Host "  3. Type: connect to Studio"
+Write-Host "The first time, Studio asks to let the plugin use localhost: click Allow."
 Read-Host "`nPress Enter to close"

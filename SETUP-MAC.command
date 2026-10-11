@@ -49,7 +49,9 @@ else
 fi
 
 printf '\n\033[32mAll done!\033[0m\n'
-echo "Open Roblox Studio and Blender, then open THIS folder in Claude Code on this computer"
-echo "(local, not cloud). The connections turn on by themselves; just ask it to build."
-echo "The first time, Studio asks to allow the plugin to use localhost: click Allow."
+echo "Next:"
+echo "  1. Open Roblox Studio and open your game."
+echo "  2. Open the Claude Code app, pick THIS folder, and pick Local (not Cloud)."
+echo "  3. Type: connect to Studio"
+echo "The first time, Studio asks to let the plugin use localhost: click Allow."
 finish 0

@@ -1,16 +1,34 @@
 # ROBLOX-GAME
 
-Connects Claude Code to **Roblox Studio** and **Blender**, so Claude can build GUIs, maps, pets, models and animations directly in them.
+Lets Claude Code build in **Roblox Studio** and **Blender** for you: GUIs, maps, pets, models and animations.
 
-## Setup (one double-click)
+## Setup: 3 steps, done once
 
-1. On GitHub, click **Code > Download ZIP** and unzip it (or clone the repo).
-2. Double-click **`SETUP-WINDOWS.bat`** (Windows) or **`SETUP-MAC.command`** (Mac). It installs everything:
-   - the connection servers (it installs Node.js too if it's missing),
-   - the Roblox Studio plugin,
-   - the Blender add-on.
-3. Open Roblox Studio and Blender, then open **this folder** in the Claude Code desktop app on your computer (choose a local session, not cloud). The connections turn on by themselves: no commands, no approval prompts.
+**1. Download.** On this GitHub page, click the green **Code** button, then **Download ZIP**. Unzip it.
 
-Done. Ask Claude Code to build something. The first time, Studio asks to allow the plugin to use `localhost`: click **Allow**.
+**2. Install.** In the unzipped folder, double-click:
+- **Windows:** `SETUP-WINDOWS.bat`. If a blue "Windows protected your PC" box appears, click **More info**, then **Run anyway**.
+- **Mac:** `SETUP-MAC.command`. If the Mac says it can't open it, right-click it, choose **Open**, then **Open** again.
 
-Details: [roblox-studio-mcp/README.md](roblox-studio-mcp/README.md) and [blender-mcp/README.md](blender-mcp/README.md).
+Wait until it says **All done!**
+
+**3. Start building.**
+1. Open Roblox Studio and open your game.
+2. Open the Claude Code app, pick **this folder**, and pick **Local** (not Cloud).
+3. Type: **connect to Studio**
+
+The first time, Studio asks to let the plugin use `localhost`. Click **Allow**.
+
+That's it. Now ask for anything, like *"make a shop GUI"* or *"build a lava obby"*.
+
+## Every time after that
+
+Open Studio, open this folder in Claude Code (Local), and ask.
+
+## If it doesn't connect
+
+- In Studio, open the **Plugins** tab. The **MCP → Connect** button should be lit; if not, click it.
+- Close Studio and Claude Code, then open them again.
+- Still stuck? Run step 2 again.
+
+More details: [roblox-studio-mcp/README.md](roblox-studio-mcp/README.md) and [blender-mcp/README.md](blender-mcp/README.md).
