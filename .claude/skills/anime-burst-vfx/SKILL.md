@@ -11,6 +11,8 @@ Learned from a Blender tutorial by @goodgood3d. The effect has three parts that 
 2. **Ring**: a thin flat ring on the ground that expands outward and fades.
 3. **Toon surface**: hard-edged black/colour stripes (no soft shading) that swirl and scroll upward. Near the end the dome breaks into blotchy holes and disappears.
 
+Build it in **layers**: the main shape (dome), a secondary shape (ring and streaks), then particles (sparks). Check each layer alone before combining. For a full ability with damage and cooldowns, use the roblox-ability-moveset skill.
+
 Default look: cyan stripes on black, glowing. Other colours from the video: green, red/pink, white/blue. Pick one that matches the ability if the user doesn't say.
 
 ## In Roblox Studio (default)
